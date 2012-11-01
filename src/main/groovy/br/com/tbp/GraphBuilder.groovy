@@ -46,6 +46,8 @@ class GraphBuilder {
         return nodeList
     }
 
+
+    // this code is not supposed to be here..
     private String getAbsolutePath(String relativePath) {
         String path = getClass().getResource(relativePath).getPath().toString();
         path = path.replace("file:/", "");
