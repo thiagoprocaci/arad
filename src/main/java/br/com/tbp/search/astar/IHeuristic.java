@@ -1,4 +1,4 @@
-package br.com.tbp.search;
+package br.com.tbp.search.astar;
 
 import br.com.tbp.model.Node;
 

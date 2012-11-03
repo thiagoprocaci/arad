@@ -5,10 +5,10 @@ import br.com.tbp.model.Node;
 public class AradBucharestNode extends Node {
     private AradBucharestEnum desc;
 
-    public AradBucharestNode(AradBucharestEnum desc, int id) {
+    public AradBucharestNode(AradBucharestEnum enumAradBucharest) {
         super();
-        this.desc = desc;
-        setId(id);
+        this.desc = enumAradBucharest;
+        setId(enumAradBucharest.id());
     }
 
     public AradBucharestEnum getDesc() {

@@ -3,8 +3,8 @@ package br.com.tbp.search.dijkstra;
 
 import br.com.tbp.GraphBuilder;
 import br.com.tbp.model.Node;
-import br.com.tbp.search.dijkstra.support.Vertex;
-import br.com.tbp.search.dijkstra.support.Edge;
+
+import br.com.tbp.support.GraphUtil;
 
 import java.util.*;
 
@@ -16,85 +16,71 @@ public class DijkstraSearch {
      //   System.out.print(nodeList);
         DijkstraSearch dijkstraSearch = new DijkstraSearch();
         dijkstraSearch.run(nodeList.get(3), nodeList.get(2));
-
-
     }
 
     public String run(Node start, Node goal) {
-        Map<Integer, Vertex> map = new HashMap<Integer, Vertex>();
-        init(start, map);
-        Vertex[] vertices =  new Vertex[map.size()];
-        int i = 0;
-        for (Integer key: map.keySet()) {
-            vertices[i] = map.get(key);
-            i++;
-        }
-        computePaths(map.get(goal.getId()));
-        for (Vertex v : vertices) {
-            System.out.println("Distance to " + v + ": " + v.minDistance);
-            List<Vertex> path = getShortestPathTo(v);
-            System.out.println("Path: " + path);
-        }
-        return null;
-    }
+        Map<Integer, Node> map = new HashMap<Integer, Node>();
+        initNodeMap(start, map);
 
-    private void init(Node start, Map<Integer, Vertex> map) {
-        if(map.containsKey(start.getId())) {
-            return;
-        }
-        List<Node> successors = start.getSuccessors();
-        Vertex vertex = new Vertex(start.toString());
-        vertex.adjacencies = new Edge[successors.size()];
-        map.put(start.getId(), vertex);
-        int i = 0;
-        for (Node node: successors) {
-               init(node, map);
-               vertex.adjacencies[i] = new Edge(map.get(node.getId()), distBetween(start, node));
-               i++;
-        }
+        Map<Node, Double> distance = new HashMap<Node, Double>();
+        Map<Node, Node> pred = new HashMap<Node, Node>();
+        initDijsktraSearch(start, map, distance, pred);
 
-    }
+        Set<Node> q = new HashSet<Node>(map.values());
+        List<Node> successors = null;
+        Double weight = null;
+        Node u = null;
+        while(!q.isEmpty()) {
+            u = extractMin(q, distance);
+            successors = u.getSuccessors();
+            for(Node v: successors) {
+                weight = GraphUtil.distBetween(u, v);
+                if(distance.get(v) > distance.get(u) + weight) {
+                    distance.put(v, distance.get(u) + weight);
+                    pred.put(v, u);
 
-    private void computePaths(Vertex source) {
-        source.minDistance = 0.;
-        PriorityQueue<Vertex> vertexQueue = new PriorityQueue<Vertex>();
-        vertexQueue.add(source);
-
-        while (!vertexQueue.isEmpty()) {
-            Vertex u = vertexQueue.poll();
-            // Visit each edge exiting u
-            for (Edge e : u.adjacencies) {
-                Vertex v = e.target;
-                double weight = e.weight;
-                double distanceThroughU = u.minDistance + weight;
-                if (distanceThroughU < v.minDistance) {
-                    vertexQueue.remove(v);
-                    v.minDistance = distanceThroughU;
-                    v.previous = u;
-                    vertexQueue.add(v);
                 }
             }
         }
+        return GraphUtil.reconstructPath(pred, goal);
     }
 
-    private List<Vertex> getShortestPathTo(Vertex target) {
-        List<Vertex> path = new ArrayList<Vertex>();
-        for (Vertex vertex = target; vertex != null; vertex = vertex.previous) {
-            path.add(vertex);
+
+    public Node extractMin(Set<Node> nodeSet, Map<Node, Double> distance) {
+        Node minNode = null;
+        Double minDistance = null;
+        for(Node key: nodeSet) {
+           if(minNode == null) {
+              minNode = key;
+              minDistance = distance.get(key);
+           }
+           if(minDistance > distance.get(key)) {
+               minNode = key;
+               minDistance = distance.get(key);
+           }
         }
-        Collections.reverse(path);
-        return path;
+        nodeSet.remove(minNode);
+        return minNode;
     }
 
-    private Double distBetween(Node src, Node dest) {
-        for (br.com.tbp.model.Edge edge : src.getEdgeList()) {
-            if (dest.equals(edge.getDest()) && src.equals(edge.getSrc())) {
-                return edge.getDistance();
+
+    public void initDijsktraSearch(Node start, Map<Integer, Node> map, Map<Node, Double> distance, Map<Node, Node> pred) {
+        for (Integer key: map.keySet()) {
+            distance.put(map.get(key), Double.MAX_VALUE);
+            pred.put(map.get(key), null);
+        }
+        distance.put(map.get(start.getId()), 0d);
+    }
+
+    public void initNodeMap(Node start, Map<Integer,Node> map) {
+        if(!map.containsKey(start.getId())) {
+            List<Node> successors = start.getSuccessors();
+            map.put(start.getId(), start);
+            for (Node node: successors) {
+                initNodeMap(node, map);
             }
         }
-        return null;
     }
-
 }
 
 

@@ -1,7 +1,7 @@
 package br.com.tbp.support;
 
 import br.com.tbp.model.Node;
-import br.com.tbp.search.IHeuristic;
+import br.com.tbp.search.astar.IHeuristic;
 
 public class AradBucharestHeuristic implements IHeuristic {
 

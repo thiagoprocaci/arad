@@ -1,12 +1,12 @@
-package br.com.tbp.search;
+package br.com.tbp.search.astar;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import br.com.tbp.model.Edge;
 import br.com.tbp.model.Node;
+import br.com.tbp.support.GraphUtil;
 
 /**
  * Implementacao do "a star search"
@@ -42,7 +42,7 @@ public class AStarSearch {
         while (!openSet.isEmpty()) {
             current = getNodeWithLowestFScore(openSet, f_score);
             if (current.equals(goal)) {
-                return reconstructPath(cameFrom, goal);
+                return GraphUtil.reconstructPath(cameFrom, goal);
             }
             openSet.remove(current);
             closedSet.add(current);
@@ -50,7 +50,7 @@ public class AStarSearch {
                 if (closedSet.contains(neighbor)) {
                     continue;
                 }
-                tentative_g_score = g_score.get(current) + distBetween(current, neighbor);
+                tentative_g_score = g_score.get(current) + GraphUtil.distBetween(current, neighbor);
                 if (!openSet.contains(neighbor) || tentative_g_score <= g_score.get(neighbor)) {
                     cameFrom.put(neighbor, current);
                     g_score.put(neighbor, tentative_g_score);
@@ -82,22 +82,7 @@ public class AStarSearch {
         return n;
     }
 
-    public Double distBetween(Node src, Node dest) {
-        for (Edge edge : src.getEdgeList()) {
-            if (dest.equals(edge.getDest()) && src.equals(edge.getSrc())) {
-                return edge.getDistance();
-            }
-        }
-        return null;
-    }
 
-    public String reconstructPath(Map<Node, Node> cameFrom, Node currentNode) {
-        if (cameFrom.get(currentNode) != null) {
-            String p = reconstructPath(cameFrom, cameFrom.get(currentNode));
-            return (p + " -> " + currentNode.toString());
-        }
-        return currentNode.toString();
-    }
 
     public void setHeuristic(IHeuristic heuristic) {
         this.heuristic = heuristic;
