@@ -10,13 +10,6 @@ import java.util.*;
 
 public class DijkstraSearch {
 
-    public static void main(String... arg) {
-        GraphBuilder graphBuilder = new GraphBuilder();
-        List<Node> nodeList = graphBuilder.buildMacroGraph();
-     //   System.out.print(nodeList);
-        DijkstraSearch dijkstraSearch = new DijkstraSearch();
-        dijkstraSearch.run(nodeList.get(3), nodeList.get(2));
-    }
 
     public String run(Node start, Node goal) {
         Map<Integer, Node> map = new HashMap<Integer, Node>();
