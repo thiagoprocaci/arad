@@ -6,7 +6,6 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY objetos "http://www.semanticweb.org/ontologies/2012/9/objetos.owl#" >
 ]>
 
 
@@ -15,13 +14,12 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:objetos="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -29,10 +27,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -40,19 +38,25 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBase -->
 
-    <owl:ObjectProperty rdf:about="&objetos;ehBase">
-        <rdfs:range rdf:resource="&objetos;Disciplina"/>
-        <rdfs:domain rdf:resource="&objetos;Disciplina"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBase">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temTopico -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temTopico"/>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -60,19 +64,29 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#nome -->
 
-    <owl:DatatypeProperty rdf:about="&objetos;nome">
-        <rdfs:domain rdf:resource="&objetos;Disciplina"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -80,16 +94,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina -->
 
-    <owl:Class rdf:about="&objetos;Disciplina"/>
-    
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
 
 
-    <!-- 
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -97,44 +117,143 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#GA -->
 
-    <owl:NamedIndividual rdf:about="&objetos;GA">
-        <rdf:type rdf:resource="&objetos;Disciplina"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#GA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
         <nome rdf:datatype="&xsd;string">Geometria Analitica</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_GA"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_GA"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_GA"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#calculo_I -->
 
-    <owl:NamedIndividual rdf:about="&objetos;calculo_I">
-        <rdf:type rdf:resource="&objetos;Disciplina"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#calculo_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
         <nome rdf:datatype="&xsd;string">Calculo I</nome>
-        <ehBase rdf:resource="&objetos;calculo_II"/>
+        <ehBase rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#calculo_II"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_calculo_I"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_calculo_I"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_calculo_I"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#calculo_II -->
 
-    <owl:NamedIndividual rdf:about="&objetos;calculo_II">
-        <rdf:type rdf:resource="&objetos;Disciplina"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#calculo_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
         <nome rdf:datatype="&xsd;string">Calculo II</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_calculo_II"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_calculo_II"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_calculo_II"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ciencia_computacao -->
 
-    <owl:NamedIndividual rdf:about="&objetos;ciencia_computacao">
-        <rdf:type rdf:resource="&objetos;Disciplina"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ciencia_computacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
         <nome rdf:datatype="&xsd;string">Ciencia da Computacao</nome>
-        <ehBase rdf:resource="&objetos;GA"/>
-        <ehBase rdf:resource="&objetos;calculo_I"/>
+        <ehBase rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#GA"/>
+        <ehBase rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#calculo_I"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_GA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_GA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">1</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 1 - GA</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_calculo_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_calculo_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">1</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 1 - Calculo I</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_calculo_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico1_calculo_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">1</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 1 - Calculo II</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_GA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_GA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">2</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 2 - GA</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_calculo_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_calculo_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">2</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 2 - Calculo I</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_calculo_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico2_calculo_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">2</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 2 - Calculo II</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_GA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_GA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">3</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 3 - GA</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_calculo_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_calculo_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">3</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 3 - Calculo I</nome>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_calculo_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#topico3_calculo_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <ordem rdf:datatype="&xsd;integer">3</ordem>
+        <nome rdf:datatype="&rdfs;Literal">Topico 3 - Calculo II</nome>
     </owl:NamedIndividual>
 </rdf:RDF>
 

@@ -1,12 +1,17 @@
-package br.com.tbp.model;
+package br.com.tbp.model.semantic;
 
 
 import br.com.tbp.GraphBuilder;
+import br.com.tbp.model.Node;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DisciplinaNode extends Node {
 
     private String rdfId;
     private String nome;
+    private List<Topico> topicoList = new ArrayList<Topico>();
 
     public String getNome() {
         return nome;
@@ -18,12 +23,20 @@ public class DisciplinaNode extends Node {
 
     public String getRdfId() {
         return rdfId;
+
     }
 
     public void setRdfId(String rdfId) {
         this.rdfId = rdfId;
     }
 
+    public List<Topico> getTopicoList() {
+        return topicoList;
+    }
+
+    public void setTopicoList(List<Topico> topicoList) {
+        this.topicoList = topicoList;
+    }
 
     @Override
     public String toString() {
