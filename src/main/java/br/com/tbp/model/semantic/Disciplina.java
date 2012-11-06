@@ -1,13 +1,13 @@
 package br.com.tbp.model.semantic;
 
 
-import br.com.tbp.GraphBuilder;
+
 import br.com.tbp.model.Node;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DisciplinaNode extends Node {
+public class Disciplina extends Node {
 
     private String rdfId;
     private String nome;
