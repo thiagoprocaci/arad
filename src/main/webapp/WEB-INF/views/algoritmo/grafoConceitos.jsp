@@ -6,12 +6,13 @@
 
 <html>
     <body>
-        <f:form id="formPrincipal" action="selecionarConceito.do" method="post">
+        <f:form id="formPrincipal" modelAttribute="topicoDto" action="selecionarConceito" method="post">
             <div>
-                <c:out value="${grafoDto.topico.nome}" escapeXml="true" />
+                <c:out value="${topico.nome}" escapeXml="true" />
+
             </div>
         </f:form>
-        <f:form id="form_2" action="selecionarConceito.do" method="get">
+        <f:form id="form_2" action="listarConceitos" method="get">
                <div>
                     <input type="submit" value="voltar" />
               </div>

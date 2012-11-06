@@ -6,7 +6,7 @@
 
 <html>
     <body>
-        <f:form id="formPrincipal" modelAttribute="grafoDto" action="selecionarConceito.do" method="post">
+        <f:form id="formPrincipal" modelAttribute="topicoDto" action="grafoConceitos" method="get">
             <div>
                   <f:select path="topicoID" items="${topicoList}" multiple="false" />
             </div>
