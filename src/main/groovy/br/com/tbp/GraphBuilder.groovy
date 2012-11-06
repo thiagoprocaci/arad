@@ -5,6 +5,7 @@ import br.com.tbp.model.semantic.Disciplina
 import br.com.tbp.model.Edge
 import br.com.tbp.model.semantic.Topico
 import br.com.tbp.model.Node
+import br.com.tbp.model.semantic.Graph
 
 class GraphBuilder {
 
@@ -12,14 +13,17 @@ class GraphBuilder {
     public static final String EH_BASE_DISCIPLINA = ONTOLOGY_PREFIX + "ehBaseDisciplina"
     public static final String EH_BASE_TOPICO = ONTOLOGY_PREFIX + "ehBaseTopico"
 
-    public List<br.com.tbp.model.Node> buildGraphFromRDF() {
+    public Graph buildGraphFromRDF() {
         def xml = getRDFObject()
 
         Map<String, Topico> topicoMap = buildTopicoMap(xml)
         Map<String, Disciplina> disciplinaMap = buildDisciplinaMap(xml, topicoMap)
         buildDisciplinaDependencies(xml, disciplinaMap)
         buildTopicoDependencies(xml, topicoMap)
-        return new ArrayList<Node>(disciplinaMap.values())
+        Graph graph = new Graph()
+        graph.setMapDisciplina(disciplinaMap)
+        graph.setMapTopico(topicoMap)
+        return graph
     }
 
     def buildTopicoMap(def xml) {

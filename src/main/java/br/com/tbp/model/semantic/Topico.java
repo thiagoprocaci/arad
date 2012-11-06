@@ -3,7 +3,9 @@ package br.com.tbp.model.semantic;
 
 import br.com.tbp.model.Node;
 
-public class Topico extends Node {
+import java.io.Serializable;
+
+public class Topico extends Node implements Serializable {
     private String rdfId;
     private String nome;
 

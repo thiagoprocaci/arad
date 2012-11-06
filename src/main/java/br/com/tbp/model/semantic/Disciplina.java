@@ -4,10 +4,11 @@ package br.com.tbp.model.semantic;
 
 import br.com.tbp.model.Node;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Disciplina extends Node {
+public class Disciplina extends Node implements Serializable {
 
     private String rdfId;
     private String nome;

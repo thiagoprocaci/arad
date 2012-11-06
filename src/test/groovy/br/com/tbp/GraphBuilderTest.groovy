@@ -254,10 +254,11 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     void testBuildGraphFromRDF() {
         GraphBuilder graphBuilder = new GraphBuilder()
-        def nodeList = graphBuilder.buildGraphFromRDF()
+        def graph = graphBuilder.buildGraphFromRDF()
 
-        assertNotNull(nodeList)
-        assert 4 == nodeList.size()
+        assertNotNull(graph)
+        assertNotNull(graph.mapDisciplina)
+        assert 4 == graph.mapDisciplina.size()
 
     }
 
