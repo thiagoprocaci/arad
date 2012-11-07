@@ -4,6 +4,8 @@ package br.com.tbp.support;
 import br.com.tbp.model.Edge;
 import br.com.tbp.model.Node;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -18,21 +20,25 @@ public class GraphUtil {
         return null;
     }
 
-    public static String reconstructPath(Map<Node, Node> cameFrom, Node currentNode) {
+    public static List<Node> reconstructPath(Map<Node, Node> cameFrom, Node currentNode) {
         if (cameFrom.get(currentNode) != null) {
-            String p = reconstructPath(cameFrom, cameFrom.get(currentNode));
-            return (p + " -> " + currentNode.toString());
+            List<Node> p = reconstructPath(cameFrom, cameFrom.get(currentNode));
+            p.add(currentNode);
+            return p;
         }
-        return currentNode.toString();
+        List<Node> nodeList = new ArrayList<Node>();
+        nodeList.add(currentNode);
+        return nodeList;
     }
 
-    public static Node getRoot(List<? extends Node> nodeList) {
+    public static Node getRoot(Collection<? extends Node> nodeList) {
         for(Node node:nodeList) {
-           if(node.getAntecessors().isEmpty()) {
-               return node;
+              if(node.getAntecessors().size() == 0) {
+                  return node;
+              }
+
            }
-        }
         return null;
     }
-
 }
+

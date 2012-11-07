@@ -11,10 +11,7 @@ import br.com.tbp.support.AradBucharestNode;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.*;
@@ -103,7 +100,15 @@ public class DijkstraSearchTest {
         Node arad = map.get(AradBucharestEnum.ARAD.id());
         Node bucharest = map.get(AradBucharestEnum.BUCHAREST.id());
 
-        assertEquals("ARAD -> SIBIU -> RIMNICU_VILCEA -> PITESTI -> BUCHAREST", dijkstraSearch.run(arad, bucharest));
+        List<Node> nodeList = dijkstraSearch.run(arad, bucharest);
+
+        assertEquals("ARAD", nodeList.get(0).toString());
+        assertEquals("SIBIU", nodeList.get(1).toString());
+        assertEquals("RIMNICU_VILCEA", nodeList.get(2).toString());
+        assertEquals("PITESTI", nodeList.get(3).toString());
+        assertEquals("BUCHAREST", nodeList.get(4).toString());
+
+
     }
 
 

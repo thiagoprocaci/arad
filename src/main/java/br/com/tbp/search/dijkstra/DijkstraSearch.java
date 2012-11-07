@@ -11,7 +11,7 @@ import java.util.*;
 public class DijkstraSearch {
 
 
-    public String run(Node start, Node goal) {
+    public List<Node> run(Node start, Node goal) {
         Map<Integer, Node> map = new HashMap<Integer, Node>();
         initNodeMap(start, map);
 

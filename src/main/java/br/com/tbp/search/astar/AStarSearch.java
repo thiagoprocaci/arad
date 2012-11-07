@@ -1,9 +1,6 @@
 package br.com.tbp.search.astar;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import br.com.tbp.model.Node;
 import br.com.tbp.support.GraphUtil;
@@ -24,7 +21,7 @@ public class AStarSearch {
      *            no final
      * @return Retorna caminho encontrado pelo "a star search"
      */
-    public String run(Node start, Node goal) {
+    public List<Node> run(Node start, Node goal) {
         // The set of nodes already evaluated.
         Set<Node> closedSet = new HashSet<Node>();
         // The set of tentative nodes to be evaluated, initially containing the
@@ -61,7 +58,7 @@ public class AStarSearch {
                 }
             }
         }
-        return "fail";
+        return new ArrayList<Node>();
     }
 
     public Node getNodeWithLowestFScore(Set<Node> openSet, Map<Node, Double> f_score) {

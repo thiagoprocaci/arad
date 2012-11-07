@@ -8,7 +8,10 @@
     <body>
         <f:form id="formPrincipal" modelAttribute="topicoDto" action="selecionarConceito" method="post">
             <div>
-                <c:out value="${topico.nome}" escapeXml="true" />
+                <c:out value="${topico.nome}" escapeXml="true" />    <br />
+                <c:forEach var="d" items="${disciplinaList}">
+                     <c:out value="${d}"/>   <br />
+                </c:forEach>
 
             </div>
         </f:form>

@@ -3,10 +3,7 @@ package br.com.tbp;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import br.com.tbp.support.AradBucharestGraphBuilder;
 import br.com.tbp.support.GraphUtil;
@@ -77,7 +74,14 @@ public class AStarSearchTest {
         Node bucharest = map.get(AradBucharestEnum.BUCHAREST.id());
 
         aStarSearch.setHeuristic(new AradBucharestHeuristic());
-        assertEquals("ARAD -> SIBIU -> RIMNICU_VILCEA -> PITESTI -> BUCHAREST", aStarSearch.run(arad, bucharest));
+        List<Node> nodeList = aStarSearch.run(arad, bucharest);
+
+        assertEquals("ARAD", nodeList.get(0).toString());
+        assertEquals("SIBIU", nodeList.get(1).toString());
+        assertEquals("RIMNICU_VILCEA", nodeList.get(2).toString());
+        assertEquals("PITESTI", nodeList.get(3).toString());
+        assertEquals("BUCHAREST", nodeList.get(4).toString());
+
     }
 
 
