@@ -34,6 +34,14 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA").rdfId)
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA").rdfId)
 
+        assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_GA").root)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA").root)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA").root)
+
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_GA").goal)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA").goal)
+        assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA").goal)
+
     }
 
     def assertTopicoCalculoI(def topicoMap) {
@@ -53,6 +61,14 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I").rdfId)
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I").rdfId)
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I").rdfId)
+
+        assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I").root)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I").root)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I").root)
+
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I").goal)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I").goal)
+        assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I").goal)
     }
 
     def assertTopicoCalculoII(def topicoMap) {
@@ -72,6 +88,14 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II").rdfId)
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II").rdfId)
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II").rdfId)
+
+        assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II").root)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II").root)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II").root)
+
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II").goal)
+        assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II").goal)
+        assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II").goal)
 
     }
 

@@ -20,11 +20,13 @@ public class Node {
 
     public Integer getId() {
         return id;
+
     }
 
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     // fazer cache dos sucessores e antecessores
     public List<Node> getSuccessors() {

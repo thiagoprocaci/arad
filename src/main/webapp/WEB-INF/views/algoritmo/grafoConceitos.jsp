@@ -6,13 +6,26 @@
 
 <html>
     <body>
-        <f:form id="formPrincipal" modelAttribute="topicoDto" action="selecionarConceito" method="post">
+        <f:form id="formPrincipal" action="aStartSearch" method="get">
             <div>
+                Caminho para
                 <c:out value="${topico.nome}" escapeXml="true" />    <br />
-                <c:forEach var="d" items="${disciplinaList}">
-                     <c:out value="${d}"/>   <br />
-                </c:forEach>
+                <c:forEach var="tree" items="${treeList}">
+                     <c:out value="  ${tree.disciplina}"/>   <br />
+                     <c:forEach var="t" items="${tree.topicoList}">
+                            <c:out value="    ${t}"/>
+                            <br />
+                            1 <input type="radio" name="${t.rdfId}" value="1">
+                            2 <input type="radio" name="${t.rdfId}" value="2">
+                            3 <input type="radio" name="${t.rdfId}" value="3">
+                            4 <input type="radio" name="${t.rdfId}" value="4">
+                            5 <input type="radio" name="${t.rdfId}" value="5">
+                            <br />
+                     </c:forEach>
+                     <br />
 
+                     <input type="submit" value="Submit" />
+                </c:forEach>
             </div>
         </f:form>
         <f:form id="form_2" action="listarConceitos" method="get">

@@ -3,6 +3,8 @@ package br.com.tbp.support;
 
 import br.com.tbp.model.Edge;
 import br.com.tbp.model.Node;
+import br.com.tbp.model.semantic.Disciplina;
+import br.com.tbp.model.semantic.Topico;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -31,8 +33,8 @@ public class GraphUtil {
         return nodeList;
     }
 
-    public static Node getRoot(Collection<? extends Node> nodeList) {
-        for(Node node:nodeList) {
+    public static Disciplina getDisciplinaRoot(Collection<Disciplina> nodeList) {
+        for(Disciplina node:nodeList) {
               if(node.getAntecessors().size() == 0) {
                   return node;
               }
@@ -40,5 +42,25 @@ public class GraphUtil {
            }
         return null;
     }
+
+    public static Topico getTopicoRoot(Collection<Topico> nodeList) {
+        for(Topico t:nodeList) {
+            if(t.isRoot()) {
+                return t;
+            }
+        }
+        return null;
+    }
+
+    public static Topico getTopicoGoal(Collection<Topico> nodeList) {
+        for(Topico t:nodeList) {
+            if(t.isGoal()) {
+                return t;
+            }
+        }
+        return null;
+    }
 }
+
+
 

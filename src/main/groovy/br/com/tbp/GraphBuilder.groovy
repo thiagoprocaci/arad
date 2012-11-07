@@ -37,6 +37,12 @@ class GraphBuilder {
             t.setNome(topico.nome.text())
             t.setRdfId(topico.@about.text())
             topicoMap.put(t.rdfId, t)
+            if(topico.root != null && topico.root != '') {
+                t.root = Boolean.valueOf(topico.root.text())
+            }
+            if(topico.goal != null && topico.goal != '') {
+                t.goal = Boolean.valueOf(topico.goal.text())
+            }
         }
         return topicoMap
     }
