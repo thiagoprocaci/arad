@@ -32,10 +32,4 @@ public class IndexController {
         return "/algoritmo/grafoConceitos";
     }
 
-
-
-
-
-
-
 }

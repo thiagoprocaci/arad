@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Node {
     // adicionar atributos para ser usado na heuristica (subclasses?)
-    private int id;
+    private Integer id;
     private Set<Edge> edgeList = new HashSet<Edge>();
 
     public Set<Edge> getEdgeList() {
@@ -18,11 +18,11 @@ public class Node {
         this.edgeList = edgeList;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -30,7 +30,7 @@ public class Node {
     public List<Node> getSuccessors() {
         List<Node> nodeList = new ArrayList<Node>();
         for (Edge edge : edgeList) {
-            if (this.equals(edge.getSrc())) {
+            if (this.id.equals(edge.getSrc().id)) {
                 nodeList.add(edge.getDest());
             }
         }
@@ -40,34 +40,28 @@ public class Node {
     public List<Node> getAntecessors() {
         List<Node> nodeList = new ArrayList<Node>();
         for (Edge edge : edgeList) {
-            if (this.equals(edge.getDest())) {
+            if (this.id.equals(edge.getDest().id)) {
                 nodeList.add(edge.getSrc());
             }
         }
         return nodeList;
     }
 
-
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + id;
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Node node = (Node) o;
+
+        if (id != null ? !id.equals(node.id) : node.id != null) return false;
+
+        return true;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Node other = (Node) obj;
-        if (id != other.id)
-            return false;
-        return true;
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override

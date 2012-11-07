@@ -95,11 +95,11 @@ public class GraphTest {
 
     @Test
     public void testNodeId() {
-        assertEquals(1, node1.getId());
-        assertEquals(2, node2.getId());
-        assertEquals(3, node3.getId());
-        assertEquals(4, node4.getId());
-        assertEquals(5, node5.getId());
+        assertEquals(1, node1.getId().intValue());
+        assertEquals(2, node2.getId().intValue());
+        assertEquals(3, node3.getId().intValue());
+        assertEquals(4, node4.getId().intValue());
+        assertEquals(5, node5.getId().intValue());
     }
 
     @Test

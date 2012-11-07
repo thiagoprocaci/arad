@@ -58,6 +58,7 @@ class GraphBuilder {
             disciplina.temTopico.each { topico ->
                 def t = topicoMap.get(topico.@resource.text())
                 node.getTopicoList().add(t)
+                t.disciplina = node
             }
         }
         return disciplinaMap

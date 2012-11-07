@@ -4,6 +4,7 @@ package br.com.tbp.support;
 import br.com.tbp.model.Edge;
 import br.com.tbp.model.Node;
 
+import java.util.List;
 import java.util.Map;
 
 public class GraphUtil {
@@ -23,6 +24,15 @@ public class GraphUtil {
             return (p + " -> " + currentNode.toString());
         }
         return currentNode.toString();
+    }
+
+    public static Node getRoot(List<? extends Node> nodeList) {
+        for(Node node:nodeList) {
+           if(node.getAntecessors().isEmpty()) {
+               return node;
+           }
+        }
+        return null;
     }
 
 }

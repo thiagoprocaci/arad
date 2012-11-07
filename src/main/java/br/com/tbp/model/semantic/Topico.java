@@ -8,6 +8,15 @@ import java.io.Serializable;
 public class Topico extends Node implements Serializable {
     private String rdfId;
     private String nome;
+    private Disciplina disciplina;
+
+    public Disciplina getDisciplina() {
+        return disciplina;
+    }
+
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
+    }
 
     public String getRdfId() {
         return rdfId;

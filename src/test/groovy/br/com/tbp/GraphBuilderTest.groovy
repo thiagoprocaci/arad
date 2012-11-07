@@ -93,6 +93,7 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertTopicoGA(topicoMap)
         assertTopicoCalculoI(topicoMap)
         assertTopicoCalculoII(topicoMap)
+
     }
 
     void testBuildDisciplinaMap() {
@@ -123,6 +124,24 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertTopicoGA(buildMapFromList(disciplinaMap.get(GA_RDF_ID).getTopicoList()))
         assertTopicoCalculoI(buildMapFromList(disciplinaMap.get(CALCULO_I_RDF_ID).getTopicoList()))
         assertTopicoCalculoII(buildMapFromList(disciplinaMap.get(CALCULO_II_RDF_ID).getTopicoList()))
+
+        def topicoList = disciplinaMap.get(GA_RDF_ID).getTopicoList()
+        topicoList.each { topico ->
+             assertNotNull(topico.disciplina)
+             assert  topico.disciplina == disciplinaMap.get(GA_RDF_ID)
+        }
+
+        topicoList = disciplinaMap.get(CALCULO_I_RDF_ID).getTopicoList()
+        topicoList.each { topico ->
+            assertNotNull(topico.disciplina)
+            assert  topico.disciplina == disciplinaMap.get(CALCULO_I_RDF_ID)
+        }
+
+        topicoList = disciplinaMap.get(CALCULO_II_RDF_ID).getTopicoList()
+        topicoList.each { topico ->
+            assertNotNull(topico.disciplina)
+            assert  topico.disciplina == disciplinaMap.get(CALCULO_II_RDF_ID)
+        }
     }
 
     void testBuildNodeDistance() {
@@ -175,6 +194,26 @@ class GraphBuilderTest extends GroovyTestCase  {
         successors = disciplinaMap.get(GA_RDF_ID).getSuccessors()
         assertNotNull(successors)
         assert 0 == successors.size()
+
+        def antecessors = disciplinaMap.get(CALCULO_I_RDF_ID).getAntecessors()
+        assertNotNull(antecessors)
+        assert 1 == antecessors.size()
+        assert disciplinaMap.get(CIENCIA_COMPUTACAO_RDF_ID) == antecessors.get(0)
+
+        antecessors = disciplinaMap.get(GA_RDF_ID).getAntecessors()
+        assertNotNull(antecessors)
+        assert 1 == antecessors.size()
+        assert disciplinaMap.get(CIENCIA_COMPUTACAO_RDF_ID) == antecessors.get(0)
+
+        antecessors = disciplinaMap.get(CALCULO_II_RDF_ID).getAntecessors()
+        assertNotNull(antecessors)
+        assert 2 == antecessors.size()
+        assert antecessors.contains(disciplinaMap.get(CALCULO_I_RDF_ID))
+        assert antecessors.contains(disciplinaMap.get(CIENCIA_COMPUTACAO_RDF_ID))
+
+        antecessors = disciplinaMap.get(CIENCIA_COMPUTACAO_RDF_ID).getAntecessors()
+        assertNotNull(antecessors)
+        assert 0 == antecessors.size()
     }
 
     void testBuildTopicoDependencies() {
@@ -250,6 +289,8 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertNotNull(successors)
         assert 0 == successors.size()
 
+        // testar os antecessores dos topicos..
+
     }
 
     void testBuildGraphFromRDF() {
@@ -259,6 +300,25 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertNotNull(graph)
         assertNotNull(graph.mapDisciplina)
         assert 4 == graph.mapDisciplina.size()
+
+        List<Integer> idList = new ArrayList<Integer>()
+        def disciplinaList = graph.mapDisciplina.values()
+
+        disciplinaList.each { disciplina ->
+            assertNotNull(disciplina)
+            assertNotNull(disciplina.id)
+            assertFalse(idList.contains(disciplina.id))
+            idList.add(disciplina.id)
+        }
+
+        idList = new ArrayList<Integer>()
+        def topicoList = graph.getMapTopico().values()
+        topicoList.each { topico ->
+            assertNotNull(topico)
+            assertNotNull(topico.id)
+            assertFalse(idList.contains(topico.id))
+            idList.add(topico.id)
+        }
 
     }
 
