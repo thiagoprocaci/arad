@@ -1,4 +1,4 @@
-package br.com.tbp;
+package br.com.tbp.search;
 
 
 import br.com.tbp.model.Edge;

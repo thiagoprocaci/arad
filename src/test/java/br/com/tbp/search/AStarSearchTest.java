@@ -1,4 +1,4 @@
-package br.com.tbp;
+package br.com.tbp.search;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;

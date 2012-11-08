@@ -9,7 +9,8 @@
         <f:form id="formPrincipal" action="aStartSearch" method="get">
             <div>
                 Caminho para
-                <c:out value="${topico.nome}" escapeXml="true" />    <br />
+                <c:out value="${topico.nome}" escapeXml="true" />
+                <br /><br />
                 <c:forEach var="tree" items="${treeList}">
                      <c:out value="  ${tree.disciplina}"/>   <br />
                      <c:forEach var="t" items="${tree.topicoList}">
@@ -23,9 +24,11 @@
                             <br />
                      </c:forEach>
                      <br />
-
-                     <input type="submit" value="Submit" />
                 </c:forEach>
+            </div>
+            <div>
+                <input type="hidden" name="topicoId" value="${topico.rdfId}"/>
+                <input type="submit" value="Submit" />
             </div>
         </f:form>
         <f:form id="form_2" action="listarConceitos" method="get">

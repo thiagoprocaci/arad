@@ -3,13 +3,14 @@ package br.com.tbp.search.astar;
 import java.util.*;
 
 import br.com.tbp.model.Node;
+import br.com.tbp.search.Algorithm;
 import br.com.tbp.support.GraphUtil;
 
 /**
  * Implementacao do "a star search"
  *
  */
-public class AStarSearch {
+public class AStarSearch implements Algorithm {
     // heuristica que sera injetada
     private IHeuristic heuristic;
 

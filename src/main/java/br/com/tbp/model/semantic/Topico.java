@@ -1,6 +1,7 @@
 package br.com.tbp.model.semantic;
 
 
+import br.com.tbp.GraphBuilder;
 import br.com.tbp.model.Node;
 
 import java.io.Serializable;
@@ -50,6 +51,13 @@ public class Topico extends Node implements Serializable {
 
     public void setGoal(boolean goal) {
         this.goal = goal;
+    }
+
+    public String getShortRdfId() {
+        if(rdfId != null) {
+           return rdfId.replace(GraphBuilder.ONTOLOGY_PREFIX, "");
+        }
+        return null;
     }
 
     @Override

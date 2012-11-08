@@ -1,4 +1,4 @@
-package br.com.tbp.controller.dto;
+package br.com.tbp.service.dto;
 
 
 import br.com.tbp.model.Node;

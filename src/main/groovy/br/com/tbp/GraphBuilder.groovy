@@ -7,6 +7,7 @@ import br.com.tbp.model.semantic.Topico
 import br.com.tbp.model.Node
 import br.com.tbp.model.semantic.Graph
 
+
 class GraphBuilder {
 
     public static final String ONTOLOGY_PREFIX = 'http://www.semanticweb.org/ontologies/2012/9/objetos.owl#'

@@ -1,14 +1,14 @@
 package br.com.tbp.search.dijkstra;
 
 
-import br.com.tbp.GraphBuilder;
 import br.com.tbp.model.Node;
 
+import br.com.tbp.search.Algorithm;
 import br.com.tbp.support.GraphUtil;
 
 import java.util.*;
 
-public class DijkstraSearch {
+public class DijkstraSearch implements Algorithm {
 
 
     public List<Node> run(Node start, Node goal) {
