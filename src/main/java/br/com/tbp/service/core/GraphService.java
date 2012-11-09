@@ -1,6 +1,7 @@
 package br.com.tbp.service.core;
 
 import br.com.tbp.GraphBuilder;
+import br.com.tbp.model.Edge;
 import br.com.tbp.model.Node;
 import br.com.tbp.model.semantic.Disciplina;
 import br.com.tbp.model.semantic.Graph;
@@ -61,7 +62,6 @@ public class GraphService implements IGraphService {
         Disciplina disciplina = topico.getDisciplina();
         Disciplina disciplinaRoot = GraphUtil.getDisciplinaRoot(graph.getMapDisciplina().values());
         List<Node> disciplinaList = algorithm.run(disciplinaRoot, disciplina);
-        System.out.println(disciplinaList);
         List<TreeDto> treeList = new ArrayList<TreeDto>();
         Topico topicoRoot = null;
         Topico topicoGoal = null;

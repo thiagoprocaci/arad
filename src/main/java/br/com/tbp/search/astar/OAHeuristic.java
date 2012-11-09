@@ -8,21 +8,22 @@ public class OAHeuristic implements IHeuristic {
     @Override
     public double estimate(Node start, Node goal) {
         ISemanticNode startNode = (ISemanticNode) start;
-        ISemanticNode goalNode = (ISemanticNode) goal;
-
-        if(goalNode.getNodeWeight() != null) {
+        // ISemanticNode goalNode = (ISemanticNode) goal;
+        double h = 0d;
+        if (startNode.getNodeWeight() != null) {
             //isso deve ser relativo..
             // senao eu influencio o g(n)
-            if(goalNode.getNodeWeight() >= 5) {
-                return 1000;
-            } else if(goalNode.getNodeWeight() == 4) {
-                return 100;
-            } else if (goalNode.getNodeWeight() == 3) {
-                 return 4;
-            } else if(goalNode.getNodeWeight() <= 2) {
-                return 0;
+            if (startNode.getNodeWeight() >= 5) {
+                h = 1000d;
+            } else if (startNode.getNodeWeight() == 4) {
+                h = 100d;
+            } else if (startNode.getNodeWeight() == 3) {
+                h = 4d;
+            } else if (startNode.getNodeWeight() <= 2) {
+                h = 0d;
             }
         }
-        return 0;
+        System.out.println(start + " " + h);
+        return h;
     }
 }
