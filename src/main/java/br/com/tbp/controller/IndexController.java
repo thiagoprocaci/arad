@@ -69,7 +69,7 @@ public class IndexController {
         Topico lastTopico = (Topico) lastTreeDto.getTopicoList().get(lastTreeDto.getTopicoList().size() - 1);
         model.addAttribute("treeList", treeList);
         model.addAttribute("topico", lastTopico);
-        return "redirect:/algoritmo/listarConceitos";
+        return "/algoritmo/grafoConceitosCust";
     }
 
 

@@ -6,12 +6,13 @@ import br.com.tbp.model.Node;
 
 import java.io.Serializable;
 
-public class Topico extends Node implements Serializable {
+public class Topico extends Node implements Serializable, ISemanticNode {
     private String rdfId;
     private String nome;
     private Disciplina disciplina;
     private boolean root = false;
     private boolean goal = false;
+    private Integer nodeWeight;
 
     public Disciplina getDisciplina() {
         return disciplina;
@@ -51,6 +52,14 @@ public class Topico extends Node implements Serializable {
 
     public void setGoal(boolean goal) {
         this.goal = goal;
+    }
+
+    public Integer getNodeWeight() {
+        return nodeWeight;
+    }
+
+    public void setNodeWeight(Integer nodeWeight) {
+        this.nodeWeight = nodeWeight;
     }
 
     public String getShortRdfId() {

@@ -8,11 +8,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Disciplina extends Node implements Serializable {
+public class Disciplina extends Node implements Serializable, ISemanticNode {
 
     private String rdfId;
     private String nome;
     private List<Topico> topicoList = new ArrayList<Topico>();
+    private Integer nodeWeight;
 
     public String getNome() {
         return nome;
@@ -37,6 +38,14 @@ public class Disciplina extends Node implements Serializable {
 
     public void setTopicoList(List<Topico> topicoList) {
         this.topicoList = topicoList;
+    }
+
+    public Integer getNodeWeight() {
+        return nodeWeight;
+    }
+
+    public void setNodeWeight(Integer nodeWeight) {
+        this.nodeWeight = nodeWeight;
     }
 
     @Override

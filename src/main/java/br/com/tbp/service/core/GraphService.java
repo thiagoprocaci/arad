@@ -7,6 +7,7 @@ import br.com.tbp.model.semantic.Graph;
 import br.com.tbp.model.semantic.Topico;
 import br.com.tbp.search.Algorithm;
 import br.com.tbp.search.astar.AStarSearch;
+import br.com.tbp.search.astar.OAHeuristic;
 import br.com.tbp.search.dijkstra.DijkstraSearch;
 import br.com.tbp.service.IGraphService;
 import br.com.tbp.service.dto.TreeDto;
@@ -36,9 +37,23 @@ public class GraphService implements IGraphService {
     @Override
     public List<TreeDto> buildAStarTree(String topicoRdfId, Map<String, Integer> weightMap) {
         Graph graph = getGraph();
+        setupNodeWeight(graph, weightMap);
         AStarSearch algorithm = new AStarSearch();
-         //algorithm.setHeuristic();    arrumar a heuristica
+        algorithm.setHeuristic(new OAHeuristic());
         return buildTree(topicoRdfId, algorithm, graph);
+    }
+
+    private void setupNodeWeight(Graph graph, Map<String, Integer> weightMap) {
+        for (String key : graph.getMapDisciplina().keySet()) {
+            if (weightMap.containsKey(key)) {
+                graph.getMapDisciplina().get(key).setNodeWeight(weightMap.get(key));
+            }
+        }
+        for (String key : graph.getMapTopico().keySet()) {
+            if (weightMap.containsKey(key)) {
+                graph.getMapTopico().get(key).setNodeWeight(weightMap.get(key));
+            }
+        }
     }
 
     private List<TreeDto> buildTree(String topicoRdfId, Algorithm algorithm, Graph graph) {
@@ -46,6 +61,7 @@ public class GraphService implements IGraphService {
         Disciplina disciplina = topico.getDisciplina();
         Disciplina disciplinaRoot = GraphUtil.getDisciplinaRoot(graph.getMapDisciplina().values());
         List<Node> disciplinaList = algorithm.run(disciplinaRoot, disciplina);
+        System.out.println(disciplinaList);
         List<TreeDto> treeList = new ArrayList<TreeDto>();
         Topico topicoRoot = null;
         Topico topicoGoal = null;
