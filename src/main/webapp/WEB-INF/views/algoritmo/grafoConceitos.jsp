@@ -14,7 +14,8 @@
                 <c:forEach var="tree" items="${treeList}">
                      <c:out value="  ${tree.disciplina}"/>   <br />
                      <c:forEach var="t" items="${tree.topicoList}">
-                            <c:out value="    ${t}"/>
+                        <c:if test="${t.root == false}">
+                            <c:out value="${t}"/>
                             <br />
                             1 <input type="radio" name="${t.rdfId}" value="1">
                             2 <input type="radio" name="${t.rdfId}" value="2">
@@ -22,6 +23,7 @@
                             4 <input type="radio" name="${t.rdfId}" value="4">
                             5 <input type="radio" name="${t.rdfId}" value="5">
                             <br />
+                        </c:if>
                      </c:forEach>
                      <br />
                 </c:forEach>

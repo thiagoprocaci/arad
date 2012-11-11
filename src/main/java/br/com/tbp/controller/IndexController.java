@@ -28,7 +28,14 @@ public class IndexController {
     @RequestMapping(value = "listarConceitos", method = RequestMethod.GET)
     public String setupForm(ModelMap model) {
         Graph graph = graphService.getGraph();
-        model.addAttribute("topicoList", graph.getMapTopico());
+        Map<String, Topico> topicoMap = graph.getMapTopico();
+        Map<String, Topico> topicoList = new HashMap<String, Topico>();
+        for (String key: topicoMap.keySet()) {
+            if(!topicoMap.get(key).isRoot()) {
+                topicoList.put(key, topicoMap.get(key));
+            }
+        }
+        model.addAttribute("topicoList", topicoList);
         model.addAttribute("topicoDto", new TopicoDto());
         return "/algoritmo/listarConceitos";
     }

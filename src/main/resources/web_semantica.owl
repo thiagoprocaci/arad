@@ -279,7 +279,14 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">Impact of XML on Enterprise IT</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
     
 
 
@@ -918,7 +925,28 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string"></nome>
         <nome rdf:datatype="&xsd;string">What are XML Namespaces?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
     
 
 
@@ -999,7 +1027,42 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">What is XML?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
     
 
 
@@ -1008,7 +1071,35 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">What is XML Schema?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
     
 
 
@@ -1017,7 +1108,21 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">What is the Document Object Model?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
     
 
 
