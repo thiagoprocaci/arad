@@ -22,6 +22,9 @@ public class GraphServiceTest {
     @Before
     public void doBefore() {
         graphService = new GraphService();
+        GraphBuilder graphBuilder = new GraphBuilder();
+        graphBuilder.setTestMode(true);
+        graphService.setGraphBuilder(graphBuilder);
     }
 
 

@@ -1,0 +1,2020 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/9/objetos.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#distancia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina">
+        <distancia rdf:datatype="&xsd;integer"></distancia>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico">
+        <distancia rdf:datatype="&xsd;integer"></distancia>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temTopico -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temTopico">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Defining the Ontology Spectrum</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Expressing Ontologies Logically</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">How do Web Services fit into the Semantic Web?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">How does XML Fit in to the Semantic Web?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Impact of XML on Enterprise IT</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Is_the_Technology_for_the_Semantic_Web_There_Yet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Is_the_Technology_for_the_Semantic_Web_There_Yet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Is the Technology for the Semantic Web &quot;There Yet&quot;?</nome>
+        <goal rdf:datatype="&xsd;boolean">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Knowledge Representation: Languages, Formalisms, Logics</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Ontologies Today</nome>
+        <goal rdf:datatype="&xsd;boolean">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Overview of Ontologies</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Overview of Taxonomies</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">Root Semantic Web</nome>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">9</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Root_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">SVG</nome>
+        <goal rdf:datatype="&xsd;boolean">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Securing Web Services</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Syntax, Structure, Semantics and Pragmatics</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">The Business Case for the Semantic Web</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Is_the_Technology_for_the_Semantic_Web_There_Yet"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_semantic_web_good_for"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_The_Business_Case_for_the_Semantic_Web"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">The Stylesheet Family: XSL, XSLT, and XSL-FO</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">9</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Topic Maps</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Topic Maps vs RDF</nome>
+        <goal rdf:datatype="&xsd;boolean">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">Understanding Ontologies</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">Understanding Taxonomies</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Taxonomies"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">Understanding Web Services</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">Understanding XML and its Impact on the Enterprise</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">Understanding the Resource Description Framework</nome>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Resource_Description_Framework"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">Understanding the Rest of the Alphabet Soup</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Understanding the basics of web services</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What are Web Services?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string"></nome>
+        <nome rdf:datatype="&xsd;string">What are XML Namespaces?</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What do the skeptics say about the Semantic Web?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What is Non-contextual Modeling?</nome>
+        <goal rdf:datatype="&xsd;boolean">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What is RDF?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What is RDF Schema?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What is XML?</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What is XML Schema?</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What is the Document Object Model?</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Disciplina"/>
+        <nome rdf:datatype="&xsd;string">What is the Semantic Web?</nome>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+        <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Rest_of_the_Alphabet_Soup"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Web_Services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_Resource_Description_Framework"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Taxonomies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_Ontologies"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Business_Case_for_the_Semantic_Web"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_semantic_web_good_for -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_semantic_web_good_for">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What is the semantic web good for?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Is_the_Technology_for_the_Semantic_Web_There_Yet"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Is_the_Technology_for_the_Semantic_Web_There_Yet"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_semantic_web_good_for"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What&#39;s after Web Services?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">What&#39;s next for Web Services?</nome>
+        <goal rdf:datatype="&xsd;string">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Why Metadata is Not Enough?</nome>
+        <goal rdf:datatype="&xsd;boolean">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Why do we need the Semantic Web?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Why is RDF not in the mainstream?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Why is XML a Success?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Why the skeptics are wrong!</nome>
+        <goal rdf:datatype="&xsd;boolean">true</goal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Why use Web Services?</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XForms</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XHTML</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XInclude</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XLink</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XML Base</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XPath</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">9</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">10</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XPointer</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">XQuery</nome>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_The_Business_Case_for_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_The_Business_Case_for_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: The Business Case for the Semantic Web</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Is_the_Technology_for_the_Semantic_Web_There_Yet"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_semantic_web_good_for"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_semantic_web_good_for"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_The_Business_Case_for_the_Semantic_Web"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Is_the_Technology_for_the_Semantic_Web_There_Yet"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_The_Business_Case_for_the_Semantic_Web"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: Understanding Ontologies</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Ontologies_Today"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Ontologies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Syntax_Structure_Semantics_and_Pragmatics"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Knowledge_Representation_Languages_Formalisms_Logics"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Expressing_Ontologies_Logically"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Ontologies"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Taxonomies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Taxonomies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: Understanding Taxonomies</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Defining_the_Ontology_Spectrum"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Taxonomies"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps_vs_RDF"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Taxonomies"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topic_Maps"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Taxonomies"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Overview_of_Taxonomies"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Taxonomies"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: Understanding Web Services</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_next_for_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Understanding_the_basics_of_web_services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_use_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Securing_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_Web_Services"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: Understanding XML and its Impact on the Enterprise</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_XML_a_Success"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_are_XML_Namespaces"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML_Schema"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_the_Document_Object_Model"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_Metadata_is_Not_Enough"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_XML"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Impact_of_XML_on_Enterprise_IT"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_XML_and_its_Impact_on_the_Enterprise"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Resource_Description_Framework -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Resource_Description_Framework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: Understanding the Resource Description Framework</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF_Schema"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Resource_Description_Framework"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_is_RDF_not_in_the_mainstream"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Resource_Description_Framework"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_RDF"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Resource_Description_Framework"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_is_Non-contextual_Modeling"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Resource_Description_Framework"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: Understanding the Rest of the Alphabet Soup</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">11</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#SVG"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XML_Base"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#The_Stylesheet_Family_XSL_XSLT_and_XSL-FO"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">9</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XHTML"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPath"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XLink"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XPointer"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XQuery"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XInclude"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">10</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#XForms"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_Understanding_the_Rest_of_the_Alphabet_Soup"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+        <nome rdf:datatype="&xsd;string">Root: What is the Semantic Web?</nome>
+        <root rdf:datatype="&xsd;boolean">true</root>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_do_Web_Services_fit_into_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Whats_after_Web_Services"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_do_we_need_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#What_do_the_skeptics_say_about_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#How_does_XML_Fit_in_to_the_Semantic_Web"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Why_the_skeptics_are_wrong"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_What_is_the_Semantic_Web"/>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

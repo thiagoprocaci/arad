@@ -101,6 +101,7 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     void testGetRDFObject() {
         GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
         assertNotNull(xml)
         assertNotNull(xml.NamedIndividual)
@@ -108,6 +109,7 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     void testBuildTopicoMap() {
         GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
         def topicoMap = graphBuilder.buildTopicoMap(xml)
 
@@ -122,6 +124,7 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     void testBuildDisciplinaMap() {
         GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
         def topicoMap = graphBuilder.buildTopicoMap(xml)
         def disciplinaMap = graphBuilder.buildDisciplinaMap(xml, topicoMap)
@@ -170,6 +173,7 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     void testBuildNodeDistance() {
         GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
         def relation = GraphBuilder.ONTOLOGY_PREFIX + "ehBaseDisciplina"
 
@@ -189,6 +193,7 @@ class GraphBuilderTest extends GroovyTestCase  {
     void testBuildDisciplinaDependencies() {
 
         GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
         def topicoMap = graphBuilder.buildTopicoMap(xml)
         def disciplinaMap = graphBuilder.buildDisciplinaMap(xml, topicoMap)
@@ -242,6 +247,7 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     void testBuildTopicoDependencies() {
         GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
         def topicoMap = graphBuilder.buildTopicoMap(xml)
 
@@ -319,6 +325,7 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     void testBuildGraphFromRDF() {
         GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
         def graph = graphBuilder.buildGraphFromRDF()
 
         assertNotNull(graph)

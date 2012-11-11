@@ -22,9 +22,18 @@ import java.util.Map;
 @Service
 public class GraphService implements IGraphService {
 
+    private GraphBuilder graphBuilder;
+
+    public void setGraphBuilder(GraphBuilder graphBuilder) {
+        this.graphBuilder = graphBuilder;
+    }
+
     @Override
+
     public Graph getGraph() {
-        GraphBuilder graphBuilder = new GraphBuilder();
+        if(graphBuilder == null) {
+            graphBuilder = new GraphBuilder();
+        }
         Graph graph = graphBuilder.buildGraphFromRDF();
         return graph;
     }

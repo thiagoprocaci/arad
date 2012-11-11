@@ -4,7 +4,7 @@ package br.com.tbp
 import br.com.tbp.model.semantic.Disciplina
 import br.com.tbp.model.Edge
 import br.com.tbp.model.semantic.Topico
-import br.com.tbp.model.Node
+
 import br.com.tbp.model.semantic.Graph
 
 
@@ -13,6 +13,9 @@ class GraphBuilder {
     public static final String ONTOLOGY_PREFIX = 'http://www.semanticweb.org/ontologies/2012/9/objetos.owl#'
     public static final String EH_BASE_DISCIPLINA = ONTOLOGY_PREFIX + "ehBaseDisciplina"
     public static final String EH_BASE_TOPICO = ONTOLOGY_PREFIX + "ehBaseTopico"
+    private static final String TEST_ONTOLOGY = '/objetos.owl'
+    private static final String ONTOLOGY = '/web_semantica.owl'
+    private boolean testMode = false;
 
     public Graph buildGraphFromRDF() {
         def xml = getRDFObject()
@@ -25,6 +28,10 @@ class GraphBuilder {
         graph.setMapDisciplina(disciplinaMap)
         graph.setMapTopico(topicoMap)
         return graph
+    }
+
+    public void setTestMode(boolean mode) {
+        this.testMode = mode;
     }
 
     def buildTopicoMap(def xml) {
@@ -106,7 +113,12 @@ class GraphBuilder {
     }
 
     def getRDFObject() {
-        def file = new File(getAbsolutePath('/objetos.owl'))
+        def file = null
+        if(testMode) {
+            file = new File(getAbsolutePath(TEST_ONTOLOGY))
+        } else {
+            file = new File(getAbsolutePath(ONTOLOGY))
+        }
         def xml = new XmlSlurper().parseText(file.text)
         return xml
     }
