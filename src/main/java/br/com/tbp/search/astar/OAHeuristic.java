@@ -23,7 +23,6 @@ public class OAHeuristic implements IHeuristic {
                 h = 0d;
             }
         }
-        System.out.println(start + " " + h);
         return h;
     }
 }

@@ -5,33 +5,64 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
+        <script src="${pageContext.request.contextPath}/js/jquery-1.8.2.min.js"></script>
+    </head>
     <body>
         <f:form id="formPrincipal" action="aStartSearch" method="get">
-            <div>
-                Caminho para
-                <c:out value="${topico.nome}" escapeXml="true" />
+                <div class="caminho">
+                    Caminho para "<c:out value="${topico.nome}" escapeXml="true" />"
+                </div>
                 <br /><br />
-                <c:forEach var="tree" items="${treeList}">
-                     <c:out value="  ${tree.disciplina}"/>   <br />
-                     <c:forEach var="t" items="${tree.topicoList}">
-                        <c:if test="${t.root == false}">
-                            <c:out value="${t}"/>
-                            <br />
-                            1 <input type="radio" name="${t.rdfId}" value="1">
-                            2 <input type="radio" name="${t.rdfId}" value="2">
-                            3 <input type="radio" name="${t.rdfId}" value="3">
-                            4 <input type="radio" name="${t.rdfId}" value="4">
-                            5 <input type="radio" name="${t.rdfId}" value="5">
-                            <br />
-                        </c:if>
-                     </c:forEach>
-                     <br />
-                </c:forEach>
-            </div>
-            <div>
-                <input type="hidden" name="topicoId" value="${topico.rdfId}"/>
-                <input type="submit" value="Submit" />
-            </div>
+                <fieldset>
+                    <c:forEach var="tree" items="${treeList}">
+                    <c:if test="${not empty tree.disciplina.antecessors}">
+                             <div class="disciplina">
+                                <c:out value="${tree.disciplina}"/>
+                             </div>
+                             <br />
+                             <c:forEach var="t" items="${tree.topicoList}">
+                                <c:if test="${t.root == false}">
+                                 <div class="topico">
+                                        <c:if test="${t.goal == false}">
+                                              <c:out value="${t}"/>
+                                        </c:if>
+                                        <c:if test="${t.goal}">
+                                              <span class="goal"> <c:out value="${t}"/> </span>
+                                        </c:if>
+                                        <br />
+                                        <c:if test="${t.goal == false}">
+                                            <div class="horizontalDiv">
+                                                <div>
+                                                     <input type="radio" name="${t.rdfId}" value="1"> 1
+                                                </div>
+                                                <div>
+                                                     <input type="radio" name="${t.rdfId}" value="2"> 2
+                                                </div>
+                                                <div>
+                                                     <input type="radio" name="${t.rdfId}" value="3"> 3
+                                                </div>
+                                                <div>
+                                                     <input type="radio" name="${t.rdfId}" value="4"> 4
+                                                </div>
+                                                <div>
+                                                     <input type="radio" name="${t.rdfId}" value="5"> 5
+                                                </div>
+                                              </div>
+                                          </c:if>
+                                        <div class="clearBothDiv"></div>
+                                   </div>
+                                </c:if>
+                             </c:forEach>
+                             <br />
+                         </c:if>
+                    </c:forEach>
+                    <div>
+                        <input type="hidden" name="topicoId" value="${topico.rdfId}"/>
+                        <input type="submit" value="Submit" />
+                    </div>
+                </fieldset>
         </f:form>
         <f:form id="form_2" action="listarConceitos" method="get">
                <div>

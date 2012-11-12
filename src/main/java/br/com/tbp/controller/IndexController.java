@@ -30,6 +30,7 @@ public class IndexController {
         Graph graph = graphService.getGraph();
         Map<String, Topico> topicoMap = graph.getMapTopico();
         Map<String, Topico> topicoList = new HashMap<String, Topico>();
+       // retira os roots para controle da ontologia
         for (String key: topicoMap.keySet()) {
             if(!topicoMap.get(key).isRoot()) {
                 topicoList.put(key, topicoMap.get(key));

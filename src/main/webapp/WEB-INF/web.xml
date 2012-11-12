@@ -19,13 +19,13 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>SpringMVCServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/algoritmo/listarConceitos</url-pattern>
+        <url-pattern>/algoritmo/grafoConceitos</url-pattern>
+        <url-pattern>/algoritmo/grafoConceitosCust</url-pattern>
+        <url-pattern>/algoritmo/aStartSearch</url-pattern>
     </servlet-mapping>
-
-
 
 
 

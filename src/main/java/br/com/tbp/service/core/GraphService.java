@@ -68,6 +68,7 @@ public class GraphService implements IGraphService {
 
     private List<TreeDto> buildTree(String topicoRdfId, Algorithm algorithm, Graph graph) {
         Topico topico = graph.getMapTopico().get(topicoRdfId);
+        topico.setGoal(true);
         Disciplina disciplina = topico.getDisciplina();
         Disciplina disciplinaRoot = GraphUtil.getDisciplinaRoot(graph.getMapDisciplina().values());
         List<Node> disciplinaList = algorithm.run(disciplinaRoot, disciplina);
