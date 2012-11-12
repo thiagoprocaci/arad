@@ -16,45 +16,51 @@
                 </div>
                 <br /><br />
                 <fieldset>
-                    <c:forEach var="tree" items="${treeList}">
+                    <c:forEach var="tree" items="${treeList}" varStatus="index">
                     <c:if test="${not empty tree.disciplina.antecessors}">
                              <div class="disciplina">
+                                <c:if test="${not index.last}">
+                                    <input type="checkbox" name="nn" id="nn_${index.count}" checked="true" value="${index.count}">
+                                </c:if>
                                 <c:out value="${tree.disciplina}"/>
+                                <input type="hidden" name="${tree.disciplina.rdfId}" value="1" id="disciplina_${index.count}"/>
                              </div>
                              <br />
-                             <c:forEach var="t" items="${tree.topicoList}">
-                                <c:if test="${t.root == false}">
-                                 <div class="topico">
-                                        <c:if test="${t.goal == false}">
-                                              <c:out value="${t}"/>
-                                        </c:if>
-                                        <c:if test="${t.goal}">
-                                              <span class="goal"> <c:out value="${t}"/> </span>
-                                        </c:if>
-                                        <br />
-                                        <c:if test="${t.goal == false}">
-                                            <div class="horizontalDiv">
-                                                <div>
-                                                     <input type="radio" name="${t.rdfId}" value="1"> 1
-                                                </div>
-                                                <div>
-                                                     <input type="radio" name="${t.rdfId}" value="2"> 2
-                                                </div>
-                                                <div>
-                                                     <input type="radio" name="${t.rdfId}" value="3"> 3
-                                                </div>
-                                                <div>
-                                                     <input type="radio" name="${t.rdfId}" value="4"> 4
-                                                </div>
-                                                <div>
-                                                     <input type="radio" name="${t.rdfId}" value="5"> 5
-                                                </div>
-                                              </div>
-                                          </c:if>
-                                        <div class="clearBothDiv"></div>
-                                   </div>
-                                </c:if>
-                             </c:forEach>
+                             <div id="topico_${index.count}">
+                                 <c:forEach var="t" items="${tree.topicoList}">
+                                    <c:if test="${t.root == false}">
+                                     <div class="topico">
+                                            <c:if test="${t.goal == false}">
+                                                  <c:out value="${t}"/>
+                                            </c:if>
+                                            <c:if test="${t.goal}">
+                                                  <span class="goal"> <c:out value="${t}"/> </span>
+                                            </c:if>
+                                            <br />
+                                            <c:if test="${t.goal == false}">
+                                                <div class="horizontalDiv">
+                                                    <div>
+                                                         <input type="radio" name="${t.rdfId}" value="1"> 1
+                                                    </div>
+                                                    <div>
+                                                         <input type="radio" name="${t.rdfId}" value="2"> 2
+                                                    </div>
+                                                    <div>
+                                                         <input type="radio" name="${t.rdfId}" value="3"> 3
+                                                    </div>
+                                                    <div>
+                                                         <input type="radio" name="${t.rdfId}" value="4"> 4
+                                                    </div>
+                                                    <div>
+                                                         <input type="radio" name="${t.rdfId}" value="5"> 5
+                                                    </div>
+                                                  </div>
+                                              </c:if>
+                                            <div class="clearBothDiv"></div>
+                                       </div>
+                                    </c:if>
+                                 </c:forEach>
+                             </div>
                              <br />
                          </c:if>
                     </c:forEach>
@@ -69,6 +75,24 @@
                     <input type="submit" value="voltar" />
               </div>
         </f:form>
+
+       <script>
+
+           $('input[name="nn"]').click(function(){
+                    var idTopico = "#topico_" + $(this).val()
+                    var idDisciplina = "#disciplina_" + $(this).val()
+                    if($(this).is(':checked')) {
+                        $(idTopico).show()
+                        $(idDisciplina).attr("value", "1")
+                    } else {
+                        $(idTopico).hide()
+                        $(idDisciplina).attr("value", "5")
+                    }
+
+           });
+
+       </script>
+
     </body>
 
 </html>

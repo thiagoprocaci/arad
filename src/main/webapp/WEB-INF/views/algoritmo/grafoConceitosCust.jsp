@@ -24,10 +24,14 @@
                          <br />
                          <c:forEach var="t" items="${tree.topicoList}">
                             <c:if test="${t.root == false}">
-                             <div class="topico">
-                                    <c:out value="${t}"/>
-                                    <br />
-                               </div>
+                            <div class="topico">
+                                 <c:if test="${t.goal == false}">
+                                       <c:out value="${t}"/>
+                                 </c:if>
+                                 <c:if test="${t.goal}">
+                                       <span class="goal"> <c:out value="${t}"/> </span>
+                                 </c:if>
+                            </div>
                             </c:if>
                          </c:forEach>
                          <br />
