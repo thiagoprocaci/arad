@@ -14,7 +14,8 @@ class GraphBuilder {
     public static final String EH_BASE_DISCIPLINA = ONTOLOGY_PREFIX + "ehBaseDisciplina"
     public static final String EH_BASE_TOPICO = ONTOLOGY_PREFIX + "ehBaseTopico"
     private static final String TEST_ONTOLOGY = '/objetos.owl'
-    private static final String ONTOLOGY = '/web_semantica.owl'
+//    private static final String ONTOLOGY = '/web_semantica.owl'
+    private static final String ONTOLOGY = '/programacao.owl'
     private boolean testMode = false;
 
     public Graph buildGraphFromRDF() {

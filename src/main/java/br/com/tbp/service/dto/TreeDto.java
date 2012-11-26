@@ -27,4 +27,5 @@ public class TreeDto implements Serializable {
     public void setTopicoList(List<Node> topicoList) {
         this.topicoList = topicoList;
     }
+
 }

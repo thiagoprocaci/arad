@@ -12,10 +12,20 @@ public class Topico extends Node implements Serializable, ISemanticNode {
     private Disciplina disciplina;
     private boolean root = false;
     private boolean goal = false;
+    private boolean selecionado = false;
     private Integer nodeWeight;
+
+    public boolean isSelecionado() {
+        return selecionado;
+    }
+
+    public void setSelecionado(boolean selecionado) {
+        this.selecionado = selecionado;
+    }
 
     public Disciplina getDisciplina() {
         return disciplina;
+
     }
 
     public void setDisciplina(Disciplina disciplina) {

@@ -33,7 +33,7 @@
                                             <c:if test="${t.goal == false}">
                                                   <c:out value="${t}"/>
                                             </c:if>
-                                            <c:if test="${t.goal}">
+                                            <c:if test="${t.selecionado}">
                                                   <span class="goal"> <c:out value="${t}"/> </span>
                                             </c:if>
                                             <br />

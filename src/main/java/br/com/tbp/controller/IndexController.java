@@ -32,7 +32,7 @@ public class IndexController {
         Map<String, Topico> topicoList = new HashMap<String, Topico>();
        // retira os roots para controle da ontologia
         for (String key: topicoMap.keySet()) {
-            if(!topicoMap.get(key).isRoot()) {
+            if(!topicoMap.get(key).isRoot() && !topicoMap.get(key).isGoal()) {
                 topicoList.put(key, topicoMap.get(key));
             }
         }
