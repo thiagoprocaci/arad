@@ -73,6 +73,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temOA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temOA">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temTopico -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#temTopico">
@@ -117,6 +126,15 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#url">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -183,10 +201,17 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">Alocacao dinamica</nome>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
+    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
@@ -199,12 +224,15 @@
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
-    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/16.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -213,6 +241,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">Analise de expressoes e avaliacao</nome>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
@@ -235,6 +264,15 @@
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/22.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -264,11 +302,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_controle_programa_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_controle_programa_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/3.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">Comandos de Controle do Programa</nome>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_controle_programa_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
@@ -279,40 +327,10 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">9</distancia>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">8</distancia>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
@@ -321,10 +339,40 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:Axiom>
     <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">9</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">1</distancia>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:Axiom>
     
 
@@ -334,6 +382,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">Construindo o esqueleto de um programa</nome>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -345,26 +394,45 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/24.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">E/S com arquivo</nome>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">1</distancia>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/9.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -374,14 +442,15 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">E/S pelo console</nome>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
@@ -390,11 +459,29 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/8.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enum_tipo_usuario_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enum_tipo_usuario_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/7.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -405,15 +492,10 @@
         <nome rdf:datatype="&xsd;string">Estruturas, unioes, enumeracoes e tipos definidos pelo usuario</nome>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enum_tipo_usuario_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">5</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
@@ -427,11 +509,26 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
     </owl:Axiom>
     <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_C_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_C_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/2.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -444,6 +541,7 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_C_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
@@ -451,9 +549,27 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -463,34 +579,10 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">9</distancia>
@@ -504,6 +596,21 @@
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_arvores_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_arvores_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/20.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -514,6 +621,7 @@
         <nome rdf:datatype="&xsd;string">Filas, pilhas, listas encadeadas e arvores binarias</nome>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_arvores_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
@@ -525,16 +633,16 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">6</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
@@ -543,10 +651,10 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
     </owl:Axiom>
     
 
@@ -558,6 +666,7 @@
         <nome rdf:datatype="&xsd;string">Funcoes de hora, data e outras relacionadas com o sistema</nome>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_hora_data_outras_sistema_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:NamedIndividual>
@@ -568,16 +677,16 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">1</distancia>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">5</distancia>
@@ -596,20 +705,21 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">6</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
@@ -618,10 +728,10 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
@@ -639,6 +749,7 @@
         <nome rdf:datatype="&xsd;string">Funcoes de E/S</nome>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
@@ -646,28 +757,10 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">8</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
@@ -676,10 +769,16 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">7</distancia>
@@ -687,6 +786,27 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/12.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -695,6 +815,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">Funcoes graficas de texto</nome>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:NamedIndividual>
@@ -710,6 +831,24 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/17.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_hora_data_outras_sistema_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_hora_data_outras_sistema_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/15.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -721,14 +860,15 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">1</distancia>
@@ -737,16 +877,10 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">5</distancia>
@@ -754,6 +888,21 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/14.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -762,6 +911,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">Funcoes Miscelaneas</nome>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -770,6 +920,24 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/18.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/6.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -783,8 +951,15 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
+    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">7</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
@@ -795,18 +970,6 @@
         <distancia rdf:datatype="&xsd;integer">6</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -821,6 +984,21 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/13.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -875,14 +1053,14 @@
         <temTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#biblioteca_c_padrao"/>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#algoritmos_aplicacoes"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linguagem_c"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#algoritmos_aplicacoes"/>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#biblioteca_c_padrao"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linguagem_c"/>
     </owl:Axiom>
@@ -902,13 +1080,8 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_bibliotecas_arquivos_cabecalho_oa_1"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">5</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
@@ -922,15 +1095,21 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_string_caracteres"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_graficas_texto"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -946,11 +1125,20 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_bibliotecas_arquivos_cabecalho_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_bibliotecas_arquivos_cabecalho_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/11.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -962,19 +1150,20 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas_oa_a"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
@@ -991,6 +1180,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas_oa_a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas_oa_a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/21.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings">
@@ -1001,36 +1199,13 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">6</distancia>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
     </owl:Axiom>
@@ -1041,11 +1216,44 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
     </owl:Axiom>
     <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">8</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/4.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -1055,6 +1263,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#Topico"/>
         <nome rdf:datatype="&xsd;string">O pre-processador C e comentarios</nome>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#pre_processador_c_comentarios_oa_1"/>
     </owl:NamedIndividual>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">1</distancia>
@@ -1075,14 +1284,9 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_esparsas"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa_oa_1"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
@@ -1090,9 +1294,15 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1102,17 +1312,26 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
     </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/19.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -1127,17 +1346,24 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros_oa_1"/>
     </owl:NamedIndividual>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
+    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#estruturas_unioes_enumeracoes_tipos_usuario"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1153,17 +1379,29 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
-    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/5.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#pre_processador_c_comentarios_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#pre_processador_c_comentarios_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/10.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -1182,9 +1420,9 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao"/>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_aplicacoes_algoritmos"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1194,9 +1432,15 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_aplicacoes_algoritmos"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#analise_expressoes_avaliacao"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#filas_pilhas_listas_encadeadas_arvores_binarias"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_aplicacoes_algoritmos"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_aplicacoes_algoritmos"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1210,12 +1454,6 @@
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_aplicacoes_algoritmos"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ordenacao_pesquisa"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_aplicacoes_algoritmos"/>
     </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">7</distancia>
@@ -1243,27 +1481,9 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">10</distancia>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">9</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1273,9 +1493,33 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
     </owl:Axiom>
     <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcao_hora_data_outras_sistemas"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linkedicao_biblioteca_arquivo_cabecalho"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_e_s"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">9</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_miscelaneas"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1285,15 +1529,9 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#alocacao_dinamica"/>
+        <distancia rdf:datatype="&xsd;integer">10</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes_matematicas"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_biblioteca_c_padrao"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_biblioteca_c_padrao"/>
     </owl:Axiom>
     
@@ -1318,45 +1556,9 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">4</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">9</distancia>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">7</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">10</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">11</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1366,9 +1568,27 @@
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">12</distancia>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">11</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">7</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1378,9 +1598,27 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
     </owl:Axiom>
     <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">4</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">10</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_arquivo"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">12</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_linguagem_c"/>
     </owl:Axiom>
     
@@ -1396,12 +1634,6 @@
         <ehBaseDisciplina rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linguagem_c"/>
     </owl:NamedIndividual>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linguagem_c"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_programacao"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#algoritmos_aplicacoes"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
@@ -1411,6 +1643,12 @@
         <distancia rdf:datatype="&xsd;integer">3</distancia>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#biblioteca_c_padrao"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_programacao"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseDisciplina"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#linguagem_c"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#root_programacao"/>
     </owl:Axiom>
     
@@ -1423,19 +1661,38 @@
         <nome rdf:datatype="&xsd;string">Solucao de problemas de inteligencia artificial</nome>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial_oa_1"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">1</distancia>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#construindo_esqueleto_programa"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
     </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_algoritmo_aplicacoes"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#solucao_problemas_inteligencia_artificial_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/23.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_geral_c_oa_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_geral_c_oa_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
+        <url rdf:datatype="&xsd;string">https://sites.google.com/site/csscode/Home/1.PDF?attredirects=0&amp;d=1</url>
+    </owl:NamedIndividual>
     
 
 
@@ -1454,37 +1711,8 @@
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
         <ehBaseTopico rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
+        <temOA rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_geral_c_oa_1"/>
     </owl:NamedIndividual>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">5</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">3</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">10</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">8</distancia>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">6</distancia>
-        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
-    </owl:Axiom>
     <owl:Axiom>
         <distancia rdf:datatype="&xsd;integer">4</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
@@ -1492,9 +1720,9 @@
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
     </owl:Axiom>
     <owl:Axiom>
-        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <distancia rdf:datatype="&xsd;integer">8</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#e_s_console"/>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1513,6 +1741,36 @@
         <distancia rdf:datatype="&xsd;integer">11</distancia>
         <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#goal_linguagem_c"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">10</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#o_pre_processador_c_comentarios"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">5</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ponteiros"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">3</distancia>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_de_controle_do_programa"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">1</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#expressoes_em_c"/>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <distancia rdf:datatype="&xsd;integer">6</distancia>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#ehBaseTopico"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#funcoes"/>
         <owl:annotatedSource rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#visao_gerao_do_c"/>
     </owl:Axiom>
 </rdf:RDF>
