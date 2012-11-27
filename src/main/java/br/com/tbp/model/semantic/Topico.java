@@ -5,6 +5,8 @@ import br.com.tbp.GraphBuilder;
 import br.com.tbp.model.Node;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Topico extends Node implements Serializable, ISemanticNode {
     private String rdfId;
@@ -14,6 +16,7 @@ public class Topico extends Node implements Serializable, ISemanticNode {
     private boolean goal = false;
     private boolean selecionado = false;
     private Integer nodeWeight;
+    private List<OA> oaList = new ArrayList<OA>();
 
     public boolean isSelecionado() {
         return selecionado;
@@ -77,6 +80,14 @@ public class Topico extends Node implements Serializable, ISemanticNode {
            return rdfId.replace(GraphBuilder.ONTOLOGY_PREFIX, "");
         }
         return null;
+    }
+
+    public List<OA> getOaList() {
+        return oaList;
+    }
+
+    public void setOaList(List<OA> oaList) {
+        this.oaList = oaList;
     }
 
     @Override

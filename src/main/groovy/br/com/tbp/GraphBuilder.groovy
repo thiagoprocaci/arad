@@ -6,6 +6,7 @@ import br.com.tbp.model.Edge
 import br.com.tbp.model.semantic.Topico
 
 import br.com.tbp.model.semantic.Graph
+import br.com.tbp.model.semantic.OA
 
 
 class GraphBuilder {
@@ -20,8 +21,8 @@ class GraphBuilder {
 
     public Graph buildGraphFromRDF() {
         def xml = getRDFObject()
-
-        Map<String, Topico> topicoMap = buildTopicoMap(xml)
+        Map<String,OA> oaMap = buildOAMap(xml);
+        Map<String, Topico> topicoMap = buildTopicoMap(xml, oaMap)
         Map<String, Disciplina> disciplinaMap = buildDisciplinaMap(xml, topicoMap)
         buildDisciplinaDependencies(xml, disciplinaMap)
         buildTopicoDependencies(xml, topicoMap)
@@ -35,7 +36,22 @@ class GraphBuilder {
         this.testMode = mode;
     }
 
-    def buildTopicoMap(def xml) {
+    def buildOAMap(def xml) {
+        def entities = xml.NamedIndividual
+        def oas = entities.findAll {it.type.@resource.text().equals(ONTOLOGY_PREFIX + 'OA') }
+        Map<String,OA> oaMap = new HashMap<String, OA>();
+
+        oas.eachWithIndex { o, i ->
+            def oa = new OA();
+            oa.setId(i)
+            oa.setUrl(o.url.text())
+            oa.setRdfId(o.@about.text())
+            oaMap.put(oa.rdfId, oa)
+        }
+        return oaMap
+    }
+
+    def buildTopicoMap(def xml, def oaMap) {
         def entities = xml.NamedIndividual
         def topicos = entities.findAll {it.type.@resource.text().equals(ONTOLOGY_PREFIX + 'Topico') }
         Map<String, Topico> topicoMap = new HashMap<String,Topico>();
@@ -51,6 +67,11 @@ class GraphBuilder {
             }
             if(topico.goal != null && topico.goal != '') {
                 t.goal = Boolean.valueOf(topico.goal.text())
+            }
+            topico.temOA.each { obj ->
+                def objeto = oaMap.get(obj.@resource.text())
+                t.getOaList().add(objeto)
+                objeto.topico = t
             }
         }
         return topicoMap

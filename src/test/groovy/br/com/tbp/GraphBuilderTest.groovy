@@ -44,6 +44,24 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     }
 
+    def assertOAGA(def oaMap) {
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_GA_OA")
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA_OA")
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA_OA")
+
+        assertEquals("topico1_GA_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_GA_OA").url)
+        assertEquals("topico2_GA_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA_OA").url)
+        assertEquals("topico3_GA_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA_OA").url)
+
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_GA_OA").id
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA_OA").id
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA_OA").id
+
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico1_GA_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_GA_OA").rdfId)
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_GA_OA").rdfId)
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_GA_OA").rdfId)
+    }
+
     def assertTopicoCalculoI(def topicoMap) {
 
         assertNotNull topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I")
@@ -71,6 +89,24 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I").goal)
     }
 
+    def assertOACalculoI(def oaMap) {
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I_OA")
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I_OA")
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I_OA")
+
+        assertEquals("topico1_calculo_I_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I_OA").url)
+        assertEquals("topico2_calculo_I_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I_OA").url)
+        assertEquals("topico3_calculo_I_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I_OA").url)
+
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I_OA").id
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I_OA").id
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I_OA").id
+
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_I_OA").rdfId)
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_I_OA").rdfId)
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_I_OA").rdfId)
+    }
+
     def assertTopicoCalculoII(def topicoMap) {
 
         assertNotNull topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II")
@@ -88,7 +124,6 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II").rdfId)
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II").rdfId)
         assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II", topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II").rdfId)
-
         assertTrue(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II").root)
         assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II").root)
         assertFalse(topicoMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II").root)
@@ -99,6 +134,24 @@ class GraphBuilderTest extends GroovyTestCase  {
 
     }
 
+    def assertOACalculoII(def oaMap) {
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II_OA")
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II_OA")
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II_OA")
+
+        assertEquals("topico1_calculo_II_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II_OA").url)
+        assertEquals("topico2_calculo_II_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II_OA").url)
+        assertEquals("topico3_calculo_II_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II_OA").url)
+
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II_OA").id
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II_OA").id
+        assertNotNull oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II_OA").id
+
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico1_calculo_II_OA").rdfId)
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico2_calculo_II_OA").rdfId)
+        assertEquals(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II_OA", oaMap.get(GraphBuilder.ONTOLOGY_PREFIX + "topico3_calculo_II_OA").rdfId)
+    }
+
     void testGetRDFObject() {
         GraphBuilder graphBuilder = new GraphBuilder()
         graphBuilder.setTestMode(true)
@@ -107,11 +160,25 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertNotNull(xml.NamedIndividual)
     }
 
+    void testBuildOAMap() {
+        GraphBuilder graphBuilder = new GraphBuilder()
+        graphBuilder.setTestMode(true)
+        def xml = graphBuilder.getRDFObject()
+        def oaMap = graphBuilder.buildOAMap(xml)
+        assert oaMap != null
+        assert 9 == oaMap.size()
+
+        assertOAGA(oaMap)
+        assertOACalculoI(oaMap)
+        assertOACalculoII(oaMap)
+    }
+
     void testBuildTopicoMap() {
         GraphBuilder graphBuilder = new GraphBuilder()
         graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
-        def topicoMap = graphBuilder.buildTopicoMap(xml)
+        def oaMap = graphBuilder.buildOAMap(xml)
+        def topicoMap = graphBuilder.buildTopicoMap(xml, oaMap)
 
         assert topicoMap != null
         assert 9 == topicoMap.size()
@@ -120,13 +187,21 @@ class GraphBuilderTest extends GroovyTestCase  {
         assertTopicoCalculoI(topicoMap)
         assertTopicoCalculoII(topicoMap)
 
+        for (String key: topicoMap.keySet()) {
+            assertNotNull(topicoMap.get(key))
+            assertNotNull(topicoMap.get(key).getOaList())
+            assertEquals(1, topicoMap.get(key).getOaList().size())
+            assertEquals(topicoMap.get(key), topicoMap.get(key).getOaList().get(0).topico)
+        }
+
     }
 
     void testBuildDisciplinaMap() {
         GraphBuilder graphBuilder = new GraphBuilder()
         graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
-        def topicoMap = graphBuilder.buildTopicoMap(xml)
+        def oaMap = graphBuilder.buildOAMap(xml)
+        def topicoMap = graphBuilder.buildTopicoMap(xml, oaMap)
         def disciplinaMap = graphBuilder.buildDisciplinaMap(xml, topicoMap)
 
         assertNotNull(disciplinaMap)
@@ -195,7 +270,8 @@ class GraphBuilderTest extends GroovyTestCase  {
         GraphBuilder graphBuilder = new GraphBuilder()
         graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
-        def topicoMap = graphBuilder.buildTopicoMap(xml)
+        def oaMap = graphBuilder.buildOAMap(xml)
+        def topicoMap = graphBuilder.buildTopicoMap(xml, oaMap)
         def disciplinaMap = graphBuilder.buildDisciplinaMap(xml, topicoMap)
 
         graphBuilder.buildDisciplinaDependencies(xml, disciplinaMap)
@@ -249,7 +325,8 @@ class GraphBuilderTest extends GroovyTestCase  {
         GraphBuilder graphBuilder = new GraphBuilder()
         graphBuilder.setTestMode(true)
         def xml = graphBuilder.getRDFObject()
-        def topicoMap = graphBuilder.buildTopicoMap(xml)
+        def oaMap = graphBuilder.buildOAMap(xml)
+        def topicoMap = graphBuilder.buildTopicoMap(xml, oaMap)
 
         graphBuilder.buildTopicoDependencies(xml, topicoMap)
 
