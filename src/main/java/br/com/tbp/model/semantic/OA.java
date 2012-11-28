@@ -10,13 +10,25 @@ public class OA implements Serializable {
     private String rdfId;
     private String url;
     private Topico topico;
+    private String tipo;
+
+
 
     public String getRdfId() {
         return rdfId;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     public void setRdfId(String rdfId) {
         this.rdfId = rdfId;
+
     }
 
     public String getUrl() {

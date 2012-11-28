@@ -32,9 +32,12 @@
                                        <span class="goal"> <c:out value="${t}"/> </span>
                                  </c:if>
                                  <br />
-                                 <c:forEach var="oa" items="${t.oaList}">
-                                       <a href="#" onClick="window.location.href='${oa.url}'" target="_blank" >download do material</a>
-                                </c:forEach>
+                            </div>
+                            <div class="oa">
+                                  <c:forEach var="oa" items="${t.oaList}" varStatus="index">
+                                         <a href="${oa.url}" target="_blank" >material <c:out value="${index.count}"/></a>
+                                         <br />
+                                  </c:forEach>
                             </div>
                             </c:if>
                          </c:forEach>
