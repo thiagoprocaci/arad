@@ -332,7 +332,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_controle_programa_oa_2">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
-        <url rdf:datatype="&xsd;string">http://www.youtube.com/watch?v=A_2HOaHAujA&amp;feature=plcp</url>
+        <url rdf:datatype="&xsd;string">http://www.youtube.com/watch?v=A_2HOaHAujA</url>
         <tipoOA rdf:datatype="&xsd;string">video</tipoOA>
     </owl:NamedIndividual>
     
@@ -342,7 +342,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#comandos_controle_programa_oa_3">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
-        <url rdf:datatype="&xsd;string">http://www.youtube.com/watch?v=UHMPdj-OGk8&amp;feature=plcp</url>
+        <url rdf:datatype="&xsd;string">http://www.youtube.com/watch?v=UHMPdj-OGk8</url>
         <tipoOA rdf:datatype="&xsd;string">video</tipoOA>
     </owl:NamedIndividual>
     
@@ -1356,7 +1356,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#matrizes_strings_oa_3">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/objetos.owl#OA"/>
-        <url rdf:datatype="&xsd;string">http://www.youtube.com/watch?v=77WX_uL3WDI&amp;feature=plcp</url>
+        <url rdf:datatype="&xsd;string">http://www.youtube.com/watch?v=77WX_uL3WDI</url>
         <tipoOA rdf:datatype="&xsd;string">video</tipoOA>
     </owl:NamedIndividual>
     

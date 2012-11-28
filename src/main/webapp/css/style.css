@@ -35,3 +35,43 @@ div.clearBothDiv {
 .goal {
    color:#FF0000;
 }
+
+body {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+}
+
+.container {
+  background-color: #F7F7F7;
+  border: 1px solid rgba(0, 0, 0, .05);
+  padding: 3px;
+}
+
+.preview {
+  position: relative;
+  cursor: pointer;
+  float: left;
+  padding-right: 5px;
+}
+
+.play {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.info-small {
+  text-size: 8pt;
+  color: gray;
+}
+
+a {
+  color: #3B5998;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+​

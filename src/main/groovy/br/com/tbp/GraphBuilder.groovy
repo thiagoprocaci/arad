@@ -46,6 +46,9 @@ class GraphBuilder {
             oa.setId(i)
             oa.setUrl(o.url.text())
             oa.setRdfId(o.@about.text())
+            if(o.tipoOA != null && o.tipoOA.size() > 0) {
+                oa.setTipo(o.tipoOA.text())
+            }
             oaMap.put(oa.rdfId, oa)
         }
         return oaMap

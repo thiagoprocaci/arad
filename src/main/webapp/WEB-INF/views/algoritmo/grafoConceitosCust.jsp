@@ -35,8 +35,32 @@
                             </div>
                             <div class="oa">
                                   <c:forEach var="oa" items="${t.oaList}" varStatus="index">
-                                         <a href="${oa.url}" target="_blank" >material <c:out value="${index.count}"/></a>
-                                         <br />
+                                         <c:if test="${oa.tipo != 'video'}">
+                                            <br />
+                                            <a href="${oa.url}" target="_blank" >material base para download</a>
+                                            <br />
+                                         </c:if>
+                                         <c:if test="${oa.tipo == 'video'}">
+                                            <div class="container">
+                                             <input type="hidden" value="${oa.videoId}" name="preview_${index.count}"/>
+                                             <input type="hidden" value="${oa.videoId}" name="api"/>
+
+                                              <div class="preview" id="preview_${index.count}">
+                                                <img class="thumb" id="${oa.videoId}">
+                                                <img class="play" src="https://s-static.ak.fbcdn.net/rsrc.php/v2/yG/r/Gj2ad6O09TZ.png">
+                                              </div>
+                                              <div class="info" id="info_${oa.videoId}">
+
+                                              </div>
+                                              <div class="info-small">
+                                                www.youtube.com
+                                              </div>
+                                              <div style="clear: both;"></div>
+                                            </div>​
+
+
+                                          </c:if>
+                                          <br />
                                   </c:forEach>
                             </div>
                             </c:if>
@@ -44,6 +68,7 @@
                          <br />
                      </c:if>
                 </c:forEach>
+
             </fieldset>
         </div>
         <f:form id="form_2" action="listarConceitos" method="get">
@@ -51,6 +76,56 @@
                     <input type="submit" value="voltar" />
               </div>
         </f:form>
+
+
     </body>
+
+                    <script>
+
+
+
+                          $(function() {
+
+                            var a = document.getElementsByName('api');
+
+                            $('input[name="api"]').each(function(index) {
+                                    var hiddenValue =  $(this).val();
+                                    var api_url = "https://gdata.youtube.com/feeds/api/videos/" + hiddenValue + "?v=2&alt=json-in-script&callback=?";
+                                    var video_url = "http://youtube.com/watch?v=" + hiddenValue;
+                                  // Get video information and set the title.
+                                  $.getJSON(api_url, function(data) {
+                                    var idElem = "#info_" + hiddenValue;
+                                    $(idElem).html("<b><a href='" + video_url + "' target='_blank'>" + data.entry.title.$t + "</a></b>");
+
+                                  });
+                            });
+
+
+                            // Set the thumbnail image for the video.
+                            $(".preview img.thumb").attr("src", "http://img.youtube.com/vi/" + $(this).attr('id') + "/1.jpg");
+
+
+                            $(".preview img.thumb").each(function(index) {
+                                var t = "http://img.youtube.com/vi/" + $(this).attr('id') + "/1.jpg"
+                                $(this).attr("src", t);
+
+                              });
+
+
+                            // Switch to the iframe when the image is clicked.
+                            $(".preview").click(function() {
+                              var hiddenName = $(this).attr('id')
+
+                              var hiddenValue =  $('input[name="' + hiddenName +'"]').val();
+
+                              var iframe_url = "http://www.youtube.com/embed/" + hiddenValue + "?autoplay=1";
+                              $(this).html("<iframe width='400' height='250' src='" + iframe_url + "' frameborder='0' allowfullscreen></iframe>");
+                              $(this).css("float", "none");
+                            });
+                          });
+                         </script>
+
+
+
 
 </html>

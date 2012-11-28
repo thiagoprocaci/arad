@@ -12,8 +12,6 @@ public class OA implements Serializable {
     private Topico topico;
     private String tipo;
 
-
-
     public String getRdfId() {
         return rdfId;
     }
@@ -53,6 +51,11 @@ public class OA implements Serializable {
 
     public void setTopico(Topico topico) {
         this.topico = topico;
+    }
+
+    public String getVideoId() {
+      System.out.print(url.replace("http://www.youtube.com/watch?v=",""));
+      return url.replace("http://www.youtube.com/watch?v=","");
     }
 
     @Override
