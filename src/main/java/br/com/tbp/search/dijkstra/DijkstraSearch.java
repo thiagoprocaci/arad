@@ -35,7 +35,8 @@ public class DijkstraSearch implements Algorithm {
                 }
             }
         }
-        return GraphUtil.reconstructPath(pred, goal);
+        List<Node> nodeList = GraphUtil.reconstructPath(pred, goal);
+        return nodeList;
     }
 
 

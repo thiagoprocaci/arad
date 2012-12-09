@@ -31,7 +31,7 @@
                                     <c:if test="${t.root == false}">
                                      <div class="topico">
                                             <c:if test="${t.goal == false}">
-                                                  <c:out value="${t}"/>
+                                                  <span class="notGoal"><c:out value="${t}"/></span>
                                             </c:if>
                                             <c:if test="${t.selecionado}">
                                                   <span class="goal"> <c:out value="${t}"/> </span>
@@ -40,19 +40,13 @@
                                             <c:if test="${t.goal == false}">
                                                 <div class="horizontalDiv">
                                                     <div>
-                                                         <input type="radio" name="${t.rdfId}" value="1"> 1
+                                                         <input type="radio" name="${t.rdfId}" value="1"> Nenhum
                                                     </div>
                                                     <div>
-                                                         <input type="radio" name="${t.rdfId}" value="2"> 2
+                                                         <input type="radio" name="${t.rdfId}" value="2"> Básico
                                                     </div>
                                                     <div>
-                                                         <input type="radio" name="${t.rdfId}" value="3"> 3
-                                                    </div>
-                                                    <div>
-                                                         <input type="radio" name="${t.rdfId}" value="4"> 4
-                                                    </div>
-                                                    <div>
-                                                         <input type="radio" name="${t.rdfId}" value="5"> 5
+                                                         <input type="radio" name="${t.rdfId}" value="3"> Requer Aprofundamento
                                                     </div>
                                                   </div>
                                               </c:if>

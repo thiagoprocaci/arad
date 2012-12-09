@@ -26,7 +26,7 @@
                             <c:if test="${t.root == false}">
                             <div class="topico">
                                  <c:if test="${t.goal == false}">
-                                       <c:out value="${t}"/>
+                                    <span class="notGoal"> <c:out value="${t}"/> </span>
                                  </c:if>
                                  <c:if test="${t.selecionado}">
                                        <span class="goal"> <c:out value="${t}"/> </span>

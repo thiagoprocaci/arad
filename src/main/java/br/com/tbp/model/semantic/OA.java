@@ -53,8 +53,7 @@ public class OA implements Serializable {
         this.topico = topico;
     }
 
-    public String getVideoId() {
-      System.out.print(url.replace("http://www.youtube.com/watch?v=",""));
+    public String getVideoId() {      
       return url.replace("http://www.youtube.com/watch?v=","");
     }
 

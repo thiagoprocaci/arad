@@ -1,9 +1,20 @@
-.caminho  {
-    font-size: x-large
+.topicoAlvo {
+     margin-left: 20px;
+     margin-right: 20px;
+     margin-up: 20px;
+     margin-down: 20px;
+}
+
+.selecioneTopico  {
+    font-size: large
 }
 
 .disciplina {
     font-size: large
+}
+
+.caminho {
+    font-size: x-large
 }
 
 .topico {
@@ -34,6 +45,10 @@ div.clearBothDiv {
 
 .goal {
    color:#FF0000;
+}
+
+.notGoal {
+   color:#0000FF;
 }
 
 body {

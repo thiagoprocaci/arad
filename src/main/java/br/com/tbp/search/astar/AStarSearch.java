@@ -3,6 +3,7 @@ package br.com.tbp.search.astar;
 import java.util.*;
 
 import br.com.tbp.model.Node;
+import br.com.tbp.model.semantic.ISemanticNode;
 import br.com.tbp.search.Algorithm;
 import br.com.tbp.support.GraphUtil;
 
@@ -23,6 +24,7 @@ public class AStarSearch implements Algorithm {
      * @return Retorna caminho encontrado pelo "a star search"
      */
     public List<Node> run(Node start, Node goal) {
+
         // The set of nodes already evaluated.
         Set<Node> closedSet = new HashSet<Node>();
         // The set of tentative nodes to be evaluated, initially containing the
@@ -37,13 +39,18 @@ public class AStarSearch implements Algorithm {
         f_score.put(start, g_score.get(start) + heuristic.estimate(start, goal));
         Node current = null;
         Double tentative_g_score = null;
+
         while (!openSet.isEmpty()) {
             current = getNodeWithLowestFScore(openSet, f_score);
+
             if (current.equals(goal)) {
-                return GraphUtil.reconstructPath(cameFrom, goal);
+                List<Node> nodeList = GraphUtil.reconstructPath(cameFrom,goal);
+
+                return nodeList;
             }
             openSet.remove(current);
             closedSet.add(current);
+
             for (Node neighbor : current.getSuccessors()) {
                 if (closedSet.contains(neighbor)) {
                     continue;
@@ -58,6 +65,7 @@ public class AStarSearch implements Algorithm {
                     }
                 }
             }
+
         }
         return new ArrayList<Node>();
     }

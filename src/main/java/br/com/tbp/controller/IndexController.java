@@ -30,7 +30,7 @@ public class IndexController {
         Graph graph = graphService.getGraph();
         Map<String, Topico> topicoMap = graph.getMapTopico();
         Map<String, Topico> topicoList = new HashMap<String, Topico>();
-       // retira os roots para controle da ontologia
+       // retira os roots e os goals para controle da ontologia
         for (String key: topicoMap.keySet()) {
             if(!topicoMap.get(key).isRoot() && !topicoMap.get(key).isGoal()) {
                 topicoList.put(key, topicoMap.get(key));
@@ -72,6 +72,7 @@ public class IndexController {
                 }
             }
         }
+
         List<TreeDto> treeList = graphService.buildAStarTree(topicoId, weightMap);
         TreeDto lastTreeDto = treeList.get(treeList.size() - 1);
         Topico lastTopico = (Topico) lastTreeDto.getTopicoList().get(lastTreeDto.getTopicoList().size() - 1);
